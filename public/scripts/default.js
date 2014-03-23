@@ -1,7 +1,8 @@
 /// <reference path="jquery-1.8.2.js" />
 var socket;
 $(document).ready(function () {
-	socket = io.connect('http://localhost:8080');
+	//socket = io.connect('http://localhost:'.port);
+	socket = io.connect('http://shuvachat.herokuapp.com:'.port);
 	socket.on('connect', addUser);
 	socket.on('updatechat', processMessage);
 	socket.on('updateusers', updateUserList);
