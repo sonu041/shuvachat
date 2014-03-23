@@ -36,6 +36,6 @@ io.sockets.on('connection', function (socket) {
 	});
 });
 
-var port = 8080;
+var port = Number(process.env.PORT || 8080);
 server.listen(port);
 console.log('Listening on port: ' + port);
